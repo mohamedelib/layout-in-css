@@ -6,15 +6,55 @@
     <title>Basic Layout 9</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-      /* Doe hier jouw ding! */
+      body {
+        display: grid;
+        grid-template-columns: 0.2fr  1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+      }
+
+      header {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+      }
+
+      nav a {
+      width: 8em;
+      height: 4em;
+      text-align: center;
+}
+      nav{
+        grid-column: 2/4;
+        grid-row:1/2;
+        display: flex;
+        align-items: center; 
+        justify-content: space-around;
+      }
+
+      main{
+        grid-column:1/4;
+        grid-row: 2/4;
+      }
+
+      footer{
+      grid-column: 1/4;
+      grid-row: 4/5;
+      /* gap: 2em */
+      }
+
+      .button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: white;}
     </style>
   </head>
   <body id="basic-layout-9">
     <header><h1>Basic Layout 9</h1></header>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Over ons</a>
-      <a href="#">Contact</a>
+      <a class="button" href="#">Home</a>
+      <a class="button" href="#">Over ons</a>
+      <a class="button" href="#">Contact</a>
     </nav>
     <main><a href="../index.html">Terug naar het overzicht</a></main>
     <footer></footer>
